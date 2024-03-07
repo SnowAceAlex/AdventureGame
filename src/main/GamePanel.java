@@ -10,7 +10,7 @@ public class GamePanel extends JPanel implements Runnable{
 
     //Screen Settings
     final int originalTileSize = 16; // 16 x 16 tile
-    final int scale = 3;
+    final int scale = 4;
     public final int tileSize = originalTileSize * scale; // 48 x 48 tile
     final int maxScreenCols = 16;
     final int maxScreenRows = 12;
@@ -43,6 +43,7 @@ public class GamePanel extends JPanel implements Runnable{
     }
 
     @Override
+    //cách 1
 //    public void run() {
 //        while(gameThread != null){
 //
@@ -70,7 +71,7 @@ public class GamePanel extends JPanel implements Runnable{
 //                e.printStackTrace();
 //            }
 //        }
-//    } Cách 1
+//    }
 
     // Cách 2
     public void run(){
