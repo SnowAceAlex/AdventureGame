@@ -3,11 +3,17 @@ package main;
 import javax.swing.*;
 
 public class Main {
+
+    public static JFrame window;
+
     public static void main(String[] args) {
-        JFrame window = new JFrame();
+        window = new JFrame();
+
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         window.setResizable(false);
         window.setTitle("Thang Ngu Phieu Luu Ky");
+//        window.setUndecorated(true);
+
         //icon
         ImageIcon icon = new ImageIcon("res/icon.png");
         window.setIconImage(icon.getImage());
@@ -20,6 +26,7 @@ public class Main {
         window.setLocationRelativeTo(null);
         window.setVisible(true);
 
+        gamePanel.setupGame();
         gamePanel.startGameThread();
     }
 }
