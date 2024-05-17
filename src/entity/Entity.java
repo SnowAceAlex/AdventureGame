@@ -62,6 +62,16 @@ public class Entity {
     //Type
     public final int type_light = 9;
 
+    //Fish
+    public int fishStar;
+    public int fishPrice;
+    public String fishRarity;
+    public String fishName;
+    public BufferedImage fishFrame;
+    public BufferedImage fishImage;
+    public BufferedImage questionMark = setup("/Item/Qm");
+    public BufferedImage starFill = setup("/Item/Starfill");
+    public BufferedImage starZero = setup("/Item/Starzero");
 
 
     public Entity(GamePanel gp){
