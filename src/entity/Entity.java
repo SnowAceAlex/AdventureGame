@@ -64,12 +64,14 @@ public class Entity {
 
     //Fish
     public int fishStar;
-    public int fishPrice;
     public String fishRarity;
     public String fishName;
     public BufferedImage fishFrame;
-    public BufferedImage fishImage;
-//    public BufferedImage questionMark = setup("/Item/Qm");
+    public int count;
+    public boolean caught = false;
+//    public BufferedImage fishImage;
+    public BufferedImage fishFinalImage;
+
 //    public BufferedImage starFill = setup("/Item/Starfill");
 //    public BufferedImage starZero = setup("/Item/Starzero");
 

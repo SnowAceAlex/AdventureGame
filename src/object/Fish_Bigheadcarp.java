@@ -7,10 +7,12 @@ public class Fish_Bigheadcarp extends Entity {
     public Fish_Bigheadcarp(GamePanel gp){
         super(gp);
         fishRarity = "Common";
-        fishName = "Big Head Carp";
+        name = "Big Head Carp";
         price = 1;
         fishStar = 1;
         down1 = setup("/Fish/Bigheadcarp_1");
+        count = 0;
+        fishFinalImage = setup("/Item/Qm");
 //        fishFrame = setup("/Fishingframe/Common");
     }
 

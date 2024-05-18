@@ -21,6 +21,7 @@ public class Player extends Entity{
     public final int screenX;
     public final int screenY;
     public boolean lightUpdated = false;
+    public int rod = 2;
 
 
     public Player(GamePanel gp, KeyHandler keyH) {

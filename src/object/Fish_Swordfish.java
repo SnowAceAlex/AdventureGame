@@ -7,10 +7,12 @@ public class Fish_Swordfish extends Entity {
     public Fish_Swordfish(GamePanel gp){
         super(gp);
         fishRarity = "Uncommon";
-        fishName = "Sword Fish";
+        name = "Sword Fish";
         price = 12;
         fishStar = 3;
         down1 = setup("/Fish/Swordfish_3");
+        count = 0;
+        fishFinalImage = setup("/Item/Qm");
 //        fishFrame = setup("Fishingframe/Uncommon");
     }
 }

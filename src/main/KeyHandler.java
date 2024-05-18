@@ -50,6 +50,18 @@ public class KeyHandler implements KeyListener {
         else if (gp.gameState == gp.tradeState) {
             tradeState(code);
         }
+        //Fishingstate
+        else if (gp.gameState == gp.fishingState){
+            fishingState(code);
+        }
+        //After fishing state
+        else if (gp.gameState == gp.afterFishingState){
+            afterFishingState(code);
+        }
+
+        else if(gp.gameState == gp.inventoryState){
+            inventoryManagementState(code);
+        }
 
     }
 
@@ -112,6 +124,13 @@ public class KeyHandler implements KeyListener {
         if(code == KeyEvent.VK_ESCAPE){
             gp.gameState = gp.optionsState;
         }
+        if(code == KeyEvent.VK_SPACE){
+            gp.gameState = gp.fishingState;
+        }
+        if(code == KeyEvent.VK_B){
+            gp.gameState = gp.inventoryState;
+        }
+
     }
     public void pauseState(int code){
         if(code == KeyEvent.VK_P){
@@ -269,6 +288,48 @@ public class KeyHandler implements KeyListener {
                 gp.ui.npcSlotCol++;
                 gp.playSE(5);
             }
+        }
+    }
+
+    public void fishingState(int code) {
+        if (code == KeyEvent.VK_SPACE) {
+            gp.ui.completion += 10;
+            if (gp.ui.completion >= 110) {
+                gp.ui.completion = 0;
+                gp.iManage.Fishing(gp.player.rod);
+                gp.gameState = gp.afterFishingState;
+            }
+        }
+    }
+
+    public void afterFishingState(int code) {
+        if (code == KeyEvent.VK_ENTER) {
+            gp.gameState = gp.playState;
+        }
+    }
+    public void inventoryManagementState(int key) {
+        if (key == KeyEvent.VK_D) {
+            if (gp.ui.inventorySlotCol != 5) {
+                gp.ui.inventorySlotCol++;
+            }
+        }
+        if (key == KeyEvent.VK_A) {
+            if (gp.ui.inventorySlotCol != 0) {
+                gp.ui.inventorySlotCol--;
+            }
+        }
+        if (key == KeyEvent.VK_W) {
+            if (gp.ui.inventorySlotRow != 0) {
+                gp.ui.inventorySlotRow --;
+            }
+        }
+        if (key == KeyEvent.VK_S) {
+            if (gp.ui.inventorySlotRow  != 3) {
+                gp.ui.inventorySlotRow ++;
+            }
+
+        } else if (key == KeyEvent.VK_B) {
+            gp.gameState = gp.playState;
         }
     }
 

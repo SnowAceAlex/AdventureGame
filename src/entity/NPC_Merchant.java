@@ -41,8 +41,6 @@ public class NPC_Merchant extends Entity{
     }
 
     public void setItem(){
-        inventory.add(new Fish_Shark(gp));
-        inventory.add(new Fish_Herring(gp));
         inventory.add(new OBJ_Key(gp));
         inventory.add(new OBJ_Shield_Wood(gp));
         inventory.add(new OBJ_Shield_Wood(gp));

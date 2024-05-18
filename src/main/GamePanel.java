@@ -51,6 +51,8 @@ public class GamePanel extends JPanel implements Runnable{
     public CollisionChecker cChecker = new CollisionChecker(this);
     public AssetSetter aSetter = new AssetSetter(this);
 
+    public InventoryManagement iManage = new InventoryManagement(this);
+
     //Entity & Object
     public Player player = new Player(this, keyH);
     public Entity obj[] = new Entity[10];
@@ -67,6 +69,10 @@ public class GamePanel extends JPanel implements Runnable{
     public final int characterState = 4;
     public final int optionsState = 5;
     public final int tradeState = 6;
+    public final int fishingState = 7;
+    public final int afterFishingState = 8;
+    public final int inventoryState = 9;
+
 
 
     public GamePanel(){

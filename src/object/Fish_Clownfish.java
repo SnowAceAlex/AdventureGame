@@ -7,10 +7,12 @@ public class Fish_Clownfish extends Entity {
     public Fish_Clownfish(GamePanel gp){
         super(gp);
         fishRarity = "Legendary";
-        fishName = "Clown Fish";
+        name = "Clown Fish";
         price = 7;
         fishStar = 1;
         down1 = setup("/Fish/Clownfish_1");
+        count = 0;
+        fishFinalImage = setup("/Item/Qm");
 //        fishFrame = setup("Fishingframe/Legendary");
     }
 }
